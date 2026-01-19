@@ -1,0 +1,11 @@
+<div style="display: flex; flex-wrap: wrap; gap: 16px;">
+    <% tareas.forEach((tarea)=> { %>
+        <div style="border: 1px solid #ccc; padding: 16px; border-radius: 8px; width: 300px;">
+            <h3><%= tarea.titulo %></h3>
+            <p><%= tarea.descripcion %></p>
+            <p><%= tarea.fecha_creacion %></p>
+            <p><%= tarea.completada %></p>
+            <p><%= tarea.id %></p>
+        </div>
+    <% }); %>
+</div>

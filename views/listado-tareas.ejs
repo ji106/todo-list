@@ -1,11 +1,17 @@
-<div style="display: flex; flex-wrap: wrap; gap: 16px;">
+<div class="d-flex flex-row flex-wrap gap-3 justify-content-center">
     <% tareas.forEach((tarea)=> { %>
-        <div style="border: 1px solid #ccc; padding: 16px; border-radius: 8px; width: 300px;">
-            <h3><%= tarea.titulo %></h3>
-            <p><%= tarea.descripcion %></p>
-            <p><%= tarea.fecha_creacion %></p>
-            <p><%= tarea.completada %></p>
-            <p><%= tarea.id %></p>
+
+        <div class="card" style="width: 18rem;">
+            <img src="https://picsum.photos/200/100" class="card-img-top" alt="<%= tarea.titulo %>">
+            <div class="card-body">
+                <h5 class="card-title"><%= tarea.titulo %></h5>
+                <h4 class="card-text"><%= tarea.descripcion %></h4>
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item"><%= tarea.fecha_creacion %></li>
+                <li class="list-group-item"><%= tarea.completada %></li>
+                <li class="list-group-item"><%= tarea.id %></li>
+            </ul>
         </div>
     <% }); %>
 </div>

@@ -1,19 +1,14 @@
-<form action="/tareas/insertar" method="POST">
-    <div>
-        <label for="titulo">Título:</label>
-        <input type="text" id="titulo" name="titulo" required>
+<form action="/tareas/insertar" method="POST" id="formularioNuevaTarea">
+    <div class="mb-3">
+        <label class="form-label" for="titulo">Título:</label>
+        <input class="form-control" type="text" id="titulo" name="titulo" required>
     </div>
-    <div>
-        <label for="descripcion">Descripción:</label>
-        <textarea id="descripcion" name="descripcion" required></textarea>
+    <div class="mb-3">
+        <label class="form-label" for="descripcion">Descripción:</label>
+        <textarea class="form-control" id="descripcion" name="descripcion" required></textarea>
     </div>
-    <div>
-        <label for="completada">
-            <input type="checkbox" id="completada" name="completada" value="1">
-            Completada
-        </label>
-    </div>
-    <div>
-        <button type="submit">Agregar Tarea</button>
+    <div class="mb-3 form-check">
+        <label class="form-check-label" for="completada">Completada</label>
+        <input class="form-check-input" type="checkbox" id="completada" name="completada" value="1">
     </div>
 </form>

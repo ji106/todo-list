@@ -1,5 +1,27 @@
 <h1>Admin page</h1>
-<p>Welcome to the admin page <%= user.email %></p>
+<p>Welcome to the admin page <%= user.email %>
+</p>
 <%- include('listado-tareas.ejs') %>
-<hr>
-<%- include('formulario-tarea.ejs') %>
+    <hr>
+
+    <div class="modal" tabindex="-1" id="modalFormulario" data-bs-backdrop="static" data-bs-keyboard="false">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Nueva tarea</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <%- include('formulario-tarea.ejs') %>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary" form="formularioNuevaTarea">Guardar tarea</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalFormulario">
+        Nueva tarea
+    </button>
